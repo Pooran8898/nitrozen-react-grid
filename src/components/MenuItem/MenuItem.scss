@@ -1,0 +1,45 @@
+@import "./../../base/base.scss";
+
+.n-menu-block-item {
+  & > a {
+    user-select: none;
+    white-space: nowrap;
+    cursor: pointer;
+    list-style: none;
+    text-decoration: none;
+    font-size: calc($BaseFontSize + 6px);
+    min-width: 100px;
+    font-weight: 400;
+    color: $TypographyPrimaryColor;
+    background-color: $ColorPrimaryBackground;
+    padding: $SpacingBase;
+    box-sizing: border-box;
+    height: 40px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    &:hover {
+      background-color: $ColorSecondaryGrey20;
+    }
+  }
+  &-divider {
+    border-bottom: 1px solid $ColorSecondaryGrey40;
+  }
+  &-selected > a {
+    color: $ColorPrimary60;
+    svg {
+      color: $ColorPrimary60;
+    }
+  }
+  &-disabled > a {
+    cursor: not-allowed;
+    background-color: $ColorSecondaryGrey20;
+    color: $ColorPrimaryGrey60;
+  }
+  &-heading > a {
+    font-size: calc($BaseFontSize + 4px);
+    &:hover {
+      background-color: $ColorPrimaryBackground;
+    }
+  }
+}

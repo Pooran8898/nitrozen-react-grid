@@ -1,0 +1,343 @@
+@import "./../../base/base.scss";
+
+.n-button {
+  height: 4rem;
+  cursor: pointer;
+  box-shadow: none;
+  font-family: $PrimaryFont;
+  font-size: $BaseFontSize + 5;
+  font-weight: 700;
+  line-height: 1.8rem;
+  text-align: center;
+  outline: none;
+  border: 0;
+  letter-spacing: 0rem;
+  background: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  letter-spacing: 0.05rem;
+  padding: 0rem 3rem;
+  border-radius: 0.3rem;
+  color: $WhiteColor;
+
+  &:disabled {
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  &:focus {
+    text-decoration: none;
+    text-underline-position: under;
+  }
+
+  &:active {
+    background-color: $ColorPrimary20;
+  }
+
+  &:after {
+    transition: none !important;
+  }
+
+  &-primary:disabled {
+    background-color: $ColorFeedbackError20;
+    color: $ColorFeedbackError80;
+  }
+
+  &-secondary:disabled {
+    border-color: $ColorSecondaryGrey80;
+    color: $ColorFeedbackError80;
+  }
+
+  &-tertiary:disabled {
+    color: $ColorFeedbackError80;
+  }
+}
+
+.n-button-primary {
+  background-color: $ColorPrimary50;
+
+  &:hover:not([disabled]) {
+    background-color: $ColorPrimary60;
+  }
+
+  &:active:not([disabled]) {
+    color: $ColorPrimary30;
+  }
+
+  &-positive {
+    background-color: $ColorFeedbackSuccess20;
+    color: $ColorFeedbackSuccess80;
+
+    &:hover:not([disabled]) {
+      background-color: $ColorFeedbackSuccess50;
+      color: $ColorWhite;
+    }
+
+    &:active:not([disabled]) {
+      background-color: $ColorFeedbackSuccess80;
+      color: $ColorFeedbackSuccess20;
+    }
+  }
+
+  &-destructive {
+    background-color: $ColorFeedbackError20;
+    color: $ColorFeedbackError80;
+
+    &:hover:not([disabled]) {
+      background-color: $ColorFeedbackError50;
+      color: $ColorWhite;
+    }
+
+    &:active:not([disabled]) {
+      background-color: $ColorFeedbackError80;
+      color: $ColorFeedbackError20;
+    }
+  }
+}
+
+.n-button-secondary {
+  color: $ColorPrimary60;
+  background-color: #00000000;
+  border: 1px solid $ColorSecondaryGrey40;
+
+  &:hover:not([disabled]) {
+    border-color: $ColorPrimary60;
+  }
+
+  &:active:not([disabled]) {
+    border-color: $ColorPrimary60;
+    background-color: $ColorPrimary20;
+  }
+
+  &-positive {
+    background-color: #00000000;
+    color: $ColorFeedbackSuccess80;
+    border: 1px solid $ColorSecondaryGrey40;
+
+    &:hover:not([disabled]) {
+      background-color: #00000000;
+      border-color: $ColorFeedbackSuccess50;
+    }
+
+    &:active:not([disabled]) {
+      color: $ColorFeedbackSuccess80;
+      background-color: $ColorFeedbackSuccess20;
+    }
+  }
+
+  &-destructive {
+    background-color: #00000000;
+    border: 1px solid $ColorFeedbackError20;
+    color: $ColorFeedbackError80;
+
+    &:hover:not([disabled]) {
+      background-color: $ColorWhite;
+      border-color: $ColorFeedbackError50;
+    }
+
+    &:active:not([disabled]) {
+      background-color: $ColorFeedbackError20;
+      color: $ColorFeedbackError80;
+    }
+  }
+}
+
+.n-button-tertiary {
+  background: transparent;
+  border: none;
+  color: $ColorPrimary60;
+
+  &:hover:not([disabled]) {
+    background-color: $ColorPrimary20;
+  }
+
+  &:active:not([disabled]) {
+    background-color: $ColorPrimary30;
+  }
+
+  &-positive {
+    background-color: #00000000;
+    color: $ColorFeedbackSuccess80;
+
+    &:hover:not([disabled]) {
+      background-color: $ColorFeedbackSuccess20;
+    }
+
+    &:active:not([disabled]) {
+      background-color: $ColorFeedbackSuccess80;
+      color: $ColorFeedbackSuccess20;
+    }
+  }
+
+  &-destructive {
+    background-color: #00000000;
+    color: $ColorFeedbackError80;
+
+    &:hover:not([disabled]) {
+      background-color: $ColorFeedbackError20;
+    }
+
+    &:active:not([disabled]) {
+      background-color: $ColorFeedbackError80;
+      color: $ColorFeedbackError20;
+    }
+  }
+}
+
+.hover-state {
+  pointer-events: none;
+}
+
+.btn-notprogress {
+  opacity: 0;
+  transition: opacity 0.25s ease-out;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.n-button-rounded:disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 0.3;
+}
+
+.n-button-rounded {
+  border-radius: 3.4rem;
+  padding: 0rem 3.2rem;
+}
+
+.n-button-large {
+  padding: 1.6rem 2.4rem; // 1.6rem 0.6rem;
+  height: 5.4rem;
+  font-size: 18px;
+  line-height: 2.5rem;
+  min-width: 5.4rem;
+
+  &_only_icon {
+    padding: 1.6rem 0.6rem !important;
+  }
+}
+
+.n-button-mid {
+  padding: 1.2rem 1.6rem; // 1.2rem 1.2rem;
+  height: 4.8rem;
+  font-size: 15px;
+  line-height: 2.5rem;
+  min-width: 4.8rem;
+
+  &_only_icon {
+    padding: 1.2rem 1.2rem !important;
+  }
+}
+
+.n-button-small {
+  padding: 0.4rem 1.6rem; //0.4rem 0.4rem;
+  height: 3rem;
+  font-size: $BaseFontSize + 2;
+  line-height: 1.9rem;
+  min-width: 3rem;
+
+  &_only_icon {
+    padding: 0.4rem 0.4rem !important;
+  }
+}
+
+.n-button-focused {
+  text-decoration: underline !important;
+  text-underline-position: under !important;
+}
+
+.n-button-content {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  justify-content: center;
+}
+
+.n-btn-spinner {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+.n-btn-spin {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 2.4rem;
+  object-fit: contain;
+  margin-left: 0.4rem;
+}
+
+.n-btn-social-icon {
+  // position: absolute;
+  // left: -3.2rem;
+  font-size: 2.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (max-width: 425px) {
+    height: 2.6rem;
+    width: 2.6rem;
+  }
+}
+
+.social-icon-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-icon-right {
+  margin-left: auto;
+}
+
+.icon-padding-left {
+  padding-left: $SpacingBase;
+}
+
+.icon-padding-right {
+  padding-right: $SpacingBase;
+}
+
+.n-icon-small {
+  height: 2rem;
+  font-size: 2rem;
+}
+
+.n-icon {
+  height: 2.4rem;
+  font-size: 2.4rem;
+}
+
+.n-icon-large {
+  height: 3rem;
+  font-size: 3rem;
+}
+
+.disable-click {
+  pointer-events: none;
+}
+
+.ripple-anchor {
+  display: inline-block;
+}
+
+.sb-display-grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  grid-gap: 1.6rem;
+  padding: 1.6rem;
+
+  @media screen and (max-width: 425px) {
+    flex-direction: column;
+  }
+}
+
+.n-button-full-width {
+  width: 100%;
+}

@@ -1,0 +1,177 @@
+@import "./../../base/base.scss";
+
+.n-dialog-backdrop {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(0.8rem);
+  background-color: $BgColor;
+  z-index: 70;
+
+  .n-dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 700;
+    outline: 0;
+    box-sizing: border-box;
+    font-family: $PrimaryFont;
+    background: $WhiteColor;
+    border: 0.1rem solid $SecondaryDisabledColor;
+    border-radius: 2.5rem;
+    padding: 2.5rem;
+
+    .n-closebtn-container {
+      display: flex;
+      justify-content: space-between;
+
+      .n-closebtn {
+        width: 3em;
+        height: 3em;
+        color: $ColorPrimary60;
+
+        &:hover {
+          cursor: pointer;
+          background-color: $ColorPrimary20;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+
+  .n-dialog-header,
+  .n-dialog-footer {
+    display: flex;
+  }
+
+  .n-dialog-header-acknowlegdement {
+    width: 95%;
+  }
+
+  .n-dialog-header {
+    margin: 0.6rem 0 0.6rem 0;
+    justify-content: space-between;
+    font-weight: 900;
+    text-transform: none;
+    font-size: 1.5rem;
+    letter-spacing: -0.72px;
+    line-height: 1.1666666667;
+
+    .n-inline-svg {
+      width: 1.4rem;
+      height: 1.4rem;
+      cursor: pointer;
+    }
+  }
+
+  .n-dialog-footer-size {
+    display: flex;
+    flex-direction: column;
+
+    .n-dialog-footer-btn-spacing {
+      margin-bottom: 0.8rem;
+    }
+  }
+
+  .n-dialog-footer {
+    margin: 2.4rem 0 0;
+    justify-content: flex-end;
+    width: 100%;
+
+    .n-dialog-footer-btn-spacing {
+      right: 1rem;
+    }
+
+    .n-dialog-negative-button {
+      color: $DialogNegativeColor;
+    }
+
+    .n-dialog-footer-button-margin {
+      width: 100%;
+      margin: 1rem;
+      max-width: 60%;
+      margin-bottom: 0;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .n-dialog-body {
+    position: relative;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    letter-spacing: -0.005em;
+    word-break: break-word;
+    color: $ColorPrimaryGrey80;
+
+    @include nitrozen-scrollbar;
+
+    @media screen and (max-width: 768px) {
+      width: 70vw;
+    }
+  }
+}
+
+.n-dialog-fade-enter,
+.n-dialog-fade-leave-active {
+  opacity: 0;
+}
+
+.n-dialog-fade-enter-active,
+.n-dialog-fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.n-dialog-icon {
+  height: 5rem;
+  width: 5rem;
+}
+
+.n-dialog-footer-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.n-wrapper-width-s {
+  width: 40%;
+}
+
+.n-wrapper-width-m {
+  width: 55%;
+}
+
+.header {
+  margin: 0rem;
+  font-weight: 700;
+  color: #141414;
+  text-transform: none;
+  font-size: 2rem;
+  letter-spacing: -0.005em;
+  line-height: 2.5rem;
+  font-family: $PrimaryFont;
+}
+.acknowlegdement-header {
+  width: 100%;
+  text-align: center;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .n-wrapper-width-s {
+    width: 46.4rem;
+  }
+
+  .n-wrapper-width-m {
+    width: 46.4rem;
+  }
+}
